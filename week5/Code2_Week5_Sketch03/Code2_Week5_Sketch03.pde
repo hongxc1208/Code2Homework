@@ -42,6 +42,7 @@ class particle{
   
   
   void display(){
+    //the display of ellipse 
     switch(state){
       case 0:
       fill(0);
@@ -62,6 +63,7 @@ class particle{
   }
   
   void update(){
+    //different animation 
     switch (state) {
       case 0:
         break;
@@ -105,7 +107,7 @@ class particle{
   
   
   void changeScene() {
-
+    //methods of transactions (different keypressed code)
     switch (state) {
       case 0:
         if (keyCode == '1' ) {

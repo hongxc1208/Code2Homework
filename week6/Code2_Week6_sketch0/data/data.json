@@ -1,0 +1,18 @@
+{
+  "descriptions": [
+    "You're a sneakerhead, walking in a shopping mall, you found there is a sneaker shop infront of you",
+    "There are many sneakers display in the store",
+    "You look on fire with the sneaker"
+  ],
+  "options": [
+    ["Walking into the shop"],
+    ["Try on the latest released sneaker", "Walk out the store"],
+    ["Buy the sneaker and leave"]
+  ],
+  
+  "optionTargets": [
+    [1],
+    [2,0],
+    [0]
+  ]
+}
