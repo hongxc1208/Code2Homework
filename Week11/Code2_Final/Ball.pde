@@ -2,7 +2,6 @@ class Ball{
   PVector pos; 
   float Speed = 8;
   float Size = 30;
-  float direction = 1;
   PVector vel;
   boolean isLaunch = false;
  
@@ -10,8 +9,6 @@ class Ball{
     pos = new PVector(x, y);
     vel = new PVector(cos(-20), sin(-30));
     vel.mult(Speed);
-    
-    println(vel);
   }
   
     void move(){
@@ -26,11 +23,9 @@ class Ball{
   
 
   void display(){
-    //rotate(radians(-70));
-    //translate(80,80);
     noStroke();
+    //rotate(radians(3));
     fill(245,202,84);
     ellipse(pos.x, pos.y, Size, Size);
   }  
 }
-  

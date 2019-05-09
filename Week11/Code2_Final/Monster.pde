@@ -10,14 +10,11 @@ class Monster{
     vel = new PVector (0, 0);
     acc = new PVector (0, 0);
     mass = random(2,3);
-    size = 5 * mass;
+    size = 3 * mass;
   }
   
-  void display(){
-   pushMatrix(); 
-   scale(0.3);
-   image(monster, pos.x, pos.y);
-   popMatrix();
+  void display(){ 
+   image(monster, pos.x, pos.y, 150, 150);
   }
   
   void update(){
@@ -30,5 +27,6 @@ class Monster{
     PVector f = PVector.div(force, mass);
     acc.add(f);
   }
+  
 
 }

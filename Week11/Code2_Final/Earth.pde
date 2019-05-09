@@ -10,7 +10,6 @@ class Earth{
   }
   
   void display(){
-     scale(0.25);
-     image(earth, -280, -280);
+     image(earth, pos.x, pos.y, 150, 150);
   }
 }
