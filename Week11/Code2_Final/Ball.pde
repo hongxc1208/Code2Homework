@@ -5,20 +5,15 @@ class Ball{
   PVector vel;
   boolean isLaunch = false;
  
-  Ball(float x, float y){
-    pos = new PVector(x, y);
-    vel = new PVector(cos(-20), sin(-30));
+  Ball(float x, float y, float angle){
+    pos = new PVector(m1.pos.x, m1.pos.y);
+    //vel = new PVector(cos(-20), sin(-30));
+    vel = new PVector(cos(radians(angle)),sin(radians(angle + 40)));
     vel.mult(Speed);
   }
   
     void move(){
-     if(keyCode == 32){
-       isLaunch = true; 
-     }
-    
-     if(isLaunch == true){
           pos.add(vel);
-       }
     }
   
 

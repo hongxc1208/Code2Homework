@@ -18,9 +18,6 @@ float[] monsterY = new float[level];
 float[] ballX = new float[300];
 float[] ballY = new float[300];
 
-float angle;
-
-
 void setup(){
   size(1600, 900);
   machine = loadImage("Machine.png");
@@ -42,19 +39,17 @@ void setup(){
 
 void draw(){
   background(255);
-  
-  
   //Earth
   e1.display();
 
   pushMatrix();
-  translate(width/2 - 150, height/2 - 110);
-  translate(100,60);
-  rotate(radians(r));
+  //translate(width/2 - 150, height/2 - 110);
+  //translate(100,60);
   
   //Machine
   pushMatrix();
   m1.display();
+  m1.update();
   popMatrix();
   
   //Ball
@@ -98,25 +93,12 @@ void draw(){
 }
 
 void keyPressed(){
-  //Machine Rotation
-  if(key == CODED){
-    if(keyCode == LEFT){
-      r += 10;
-    } if(keyCode == RIGHT){
-      r -= 10;
-    }
-  }
-  
   //add ball to arraylist
-  pushMatrix();
-  if(keyCode == 32){
-    balls.add(new Ball(m1.pos.x + 60, m1.pos.y + 120));
-  }
-  popMatrix();
-  
-  
-    
+     if(keyCode == 32){
+      balls.add(new Ball(m1.pos.x + 60, m1.pos.y + 120, m1.R));
+  } 
 }
+
 
 
 void hit(){
